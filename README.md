@@ -1,5 +1,7 @@
 # Svenska Statistiska Centralbyråns vackra hemsida
 
+https://gherghett.github.io/SCB-klon/
+
 Dom har en riktigt fin sida där borta! Jag som en övning försökte klona utseendet av framsidan, med tailwind för det mesta.
 
 ## Original
