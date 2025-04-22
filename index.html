@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>clone SCB</title>
+    <style>
+        /* Hide scrollbar for Webkit browsers */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge, and Firefox */
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;     /* Firefox */
+        }
+        body, a {
+            color: rgb(30 27 75 / var(--tw-text-opacity, 1));
+        }
+        h2, h3 {
+            
+        }
+        #news-area {
+            display: grid;
+            grid-template-columns: 1fr;
+            li::before {
+                position: absolute;
+                left: 0.2rem;
+                content: ">";
+            }
+        }
+        #news {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        article {
+            a::after {
+                content:"\00a0>";
+            }
+        }
+
+        #page-footer {
+            a {
+                color:white;
+                border-bottom: 1px solid white;
+                &:hover {
+                    border-bottom: 2px solid white;
+                }
+            }
+            h2 {
+                margin-top: 2rem;
+                font-size: small;
+                font-weight: bolder;
+            }
+            li {
+                margin: 0.5rem 0;
+            }
+        }
+
+        @media (min-width:640px) {
+            
+            #news-area {
+                grid-template-columns: 16rem 1fr;
+            }
+        }
+        
+        
+        /* md */
+        @media (min-width:768px) {
+            #news {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width:1024px) {
+            #news-area {
+                grid-template-columns: 3fr 7fr;
+            }
+            #news {
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+        }
+
+
+    </style>
+</head>
+<body class= "text-indigo-950">
+    <header  class="bg-white border-[1.6px]">
+        <div class="w-full mx-auto xl:w-[1260px] px-6 pt-3">
+            <div id="header-top" class="flex flex-row items-center content-between">
+                <div id="logo" class="font-extrabold text-gray-200 text-2xl">
+                    SCB
+                </div>
+                <div class="top-menu ml-auto flex flex-row">
+                    <ul class="">
+                        <a href="" class="hidden lg:inline">In English</a>
+                        <a href="" class="hidden lg:inline">Lättläst</a>
+                        <a href="" class="hidden lg:inline">Press</a>
+                        <a href="" class="hidden lg:inline">Kontakt</a>
+    
+                        <a href="" class="md:hidden">Sök</a>
+                    </ul>
+                    <div class="search hidden md:block">
+                        <input type="text" class="border border-slate-600 rounded-full">
+                        <button class="bg-sky-200 rounded-full text-blue-950 font-bold">Sök</button>
+                    </div>
+                </div>
+            </div>
+            <div id="top-menu-below" class="flex flox-col justify-between">
+                <nav>
+                    <a href="" class="hidden sm:inline">Hitta statistik</a>
+                    <a href="" class="hidden sm:inline">Våra tjänster</a>
+                    <a href="" class="hidden sm:inline">Dokumentation</a>
+                    <a href="" class="hidden sm:inline">Lämna uppgifter</a>
+                    <a href="" class="hidden sm:inline">Om SCB</a>
+                </nav>
+                <a href="">Menu</a>
+            </div>
+        </div>
+    </header>
+    <main class="w-full mx-auto xl:w-[1260px] px-6 bg-white">   
+        <div id="curiosity-scroller" class="mt-6 text-indigo-950 flex overflow-x-scroll hide-scrollbar space-x-3">
+            <div class="card w-48 shrink-0 rounded-xl bg-violet-100 p-4">
+                <h3 class="font-bold text-2xl">9,0 %</h3>
+                <p class="text-sm font-bold">Arbetslöshet (säsongrensat och utjämnat)</p>
+                <p class="text-xs">februari 2025</p>
+            </div>
+            <div class="card w-48 shrink-0 rounded-xl bg-violet-100 p-4">
+                <h3 class="font-bold text-2xl">10 587 970</h3>
+                <p class="text-sm font-bold">Folkmängd</p>
+                <p class="text-xs">februarix 2025</p>
+            </div>
+            <div class="card w-48 shrink-0 rounded-xl bg-violet-100 p-4">
+                <h3 class="font-bold text-2xl">0,5 %</h3>
+                <p class="text-sm font-bold">Inflationstakt enligt KPI</p>
+                <p class="text-xs">februari 2025</p>
+            </div>
+            <div class="card w-48 shrink-0 rounded-xl bg-violet-100 p-4">
+                <h3 class="font-bold text-2xl">2,5 %</h3>
+                <p class="text-sm font-bold">Inflationstakt enligt KPI</p>
+                <p class="text-xs">februari 2025</p>
+            </div>
+            <div class="card w-48 shrink-0 rounded-xl bg-violet-100 p-4">
+                <h3 class="font-bold text-2xl">0.8 %</h3>
+                <p class="text-sm font-bold">BNP, volymförändring (säsongrensad)</p>
+                <p class="text-xs">kvartal 4 2024 jämfört med föregående period</p>
+            </div>
+            <div class="card w-48 shrink-0 rounded-xl bg-violet-100 p-4">
+                <h3 class="font-bold text-2xl">9,0 %</h3>
+                <p class="text-sm font-bold">Arbetslöshet (säsongrensat och utjämnat)</p>
+                <p class="text-xs">februari 2025</p>
+            </div>
+            <div class="card w-48 shrink-0 rounded-xl bg-violet-100 p-4">
+                <h3 class="font-bold text-2xl">10 587 970</h3>
+                <p class="text-sm font-bold">Folkmängd</p>
+                <p class="text-xs">februari 2025</p>
+            </div>
+            <div class="card w-48 shrink-0 rounded-xl bg-violet-100 p-4">
+                <h3 class="font-bold text-2xl">0,5 %</h3>
+                <p class="text-sm font-bold">Inflationstakt enligt KPI</p>
+                <p class="text-xs">februari 2025</p>
+            </div>
+            <div class="card w-48 shrink-0 rounded-xl bg-violet-100 p-4">
+                <h3 class="font-bold text-2xl">2,5 %</h3>
+                <p class="text-sm font-bold">Inflationstakt enligt KPI</p>
+                <p class="text-xs">februari 2025</p>
+            </div>
+            <div class="card w-48 shrink-0 rounded-xl bg-violet-100 p-4">
+                <h3 class="font-bold text-2xl">0.8 %</h3>
+                <p class="text-sm font-bold">BNP, volymförändring (säsongrensad)</p>
+                <p class="text-xs">kvartal 4 2024 jämfört med föregående period</p>
+            </div>
+        </div>
+        <hr class="my-6">
+        <div id="news-area" class="mt-4 gap-8">
+            <section id="news" class="sm:col-span-1 sm:col-start-2 sm:row-start-1 gap-8">
+                <article class="bg-violet-100 rounded-xl md:col-span-2 lg:col-span-1 lg:row-span-2 lg:col-start-1 lg:row-start-1">
+                    <img class="rounded-t-xl w-full" src="img/aku_aug_24.webp" alt="">
+                    <div class="text p-3">
+                        <h3 class="font-bold"><a class="hover:border-b border-indigo-950" href="">Vanligt att arbeta som ingenjör trots ofullständig utbildning</a></h3>
+                        <p class="mt-3">Många arbetsgivare upplever brist på nyutexaminerade civilingenjörer. Det leder till att även de som bara läst en del av utbildningen får arbete som ingenjörer.</p>
+                    </div>
+                </article>
+                <article class="bg-violet-100 rounded-xl lg:col-start-2 lg:row-start-1">
+                    <img class="hidden md:block rounded-t-xl" src="img/aku-mars-2025-startpuff.webp" alt="">
+                    <div class="text p-3">
+                        <h3 class="font-bold"><a class="hover:border-b border-indigo-950" href="">Återhållsam arbetsmarknad med vissa positiva tecken</a></h3>
+                    </div>
+                </article>
+                <article class="bg-violet-100 rounded-xl lg:col-start-2 lg:row-start-2">
+                    <img class="hidden md:block rounded-t-xl" src="img/aku-mars-2025-startpuff.webp" alt="">
+                    <div class="text p-3">
+                        <h3 class="font-bold"><a class="hover:border-b border-indigo-950" href="">Återhållsam arbetsmarknad med vissa positiva tecken</a></h3>
+                    </div>
+                </article>
+            </section>
+            <aside class="sm:col-span-1 sm:col-start-1 sm:row-start-1 sm:pr-3 sm:border-r border-slate-200">
+                <h2 class="font-bold text-lg">Ny statistik</h2>
+                <small>Publiceras helgfria vardagar 8.00</small>
+                <ul class="relative mt-3 pl-8 space-y-3">
+                    <li class="font-bold repeat-5">Återhållsam arbetsmarknad med vissa positiva tecken<date class="block font-normal text-sm">22 apr. 2025</span></li>
+                </ul>
+            </aside>
+        </div>
+        <hr class="my-6">
+        <div class="stories grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            <article class=" bg-violet-100 rounded-xl ">
+                <img class="rounded-t-xl w-full" src="img/aku_aug_24.webp" alt="">
+                <div class="text p-3">
+                    <h3 class="font-bold"><a class="hover:border-b border-indigo-950" href="">Konjukturklockan: kojukturen något bätter än föregående månad</a></h3>
+                </div>
+            </article>
+            <article class="repeat-3 bg-violet-100 rounded-xl">
+                <img class="hidden w-full sm:block rounded-t-xl" src="img/aku-mars-2025-startpuff.webp" alt="">
+                <div class="text p-3">
+                    <h3 class="font-bold"><a class="hover:border-b border-indigo-950" href="">Konjukturklockan: kojukturen något bätter än föregående månad</a></h3>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer id="page-footer" class="w-full mt-6 mx-auto xl:w-[1260px] px-6 py-12 md:grid md:grid-cols-4 bg-blue-950 text-white">
+        <section>
+            <h2>Aktuell statistik</h2>
+           <ul>
+               <li><a href="#" class="text-white">Statistiknyheter</a></li>
+               <li><a href="#">Nyheter och press</a></li>
+               <li><a href="#">Publiceringskalendern</a></li>
+           </ul>
+        </section>
+        <section>
+            <h2>Hitta snabbt</h2>
+            <ul>
+                <li><a href="#">Kontakta oss</a></li>
+                <li><a href="#">Jobba hos oss</a></li>
+                <li><a href="#">Presskontakt</a></li>
+                <li><a href="#">Rapporter</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Om innehållet</h2>
+            <ul>
+                <li><a href="#">Om webbplatsen</a></li>
+                <li><a href="#">Tillgänglighetsredogörelse</a></li>
+                <li><a href="#">Ordlista</a></li>
+                <li><a href="#">Om kakor (cookies)</a></li>
+                <li><a href="#">Personuppgifter</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Följ SCB</h2>
+            <ul>
+                <li><a href="#">Bevaka nyheter från SCB</a></li>
+                <li><a href="#">SCB i sociala medier</a></li>
+            </ul>
+        </section>
+        <footer class="mt-6 md:col-span-4 text-center">
+            <h1 class="text-black text-3xl font-bold">SCB</h1>
+            <p>Statistikmyndigheten SCB förser samhället med statistik för beslutsfattande, debatt och forskning.</p>
+        </footer>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const repeatElements = document.querySelectorAll('[class*="repeat-"]');
+        
+            repeatElements.forEach(original => {
+                const match = [...original.classList].find(cls => cls.startsWith("repeat-"));
+                const count = match ? parseInt(match.replace("repeat-", ""), 10) : 0;
+        
+                for (let i = 1; i < count; i++) { // start at 1 since original is already there
+                    const clone = original.cloneNode(true);
+                    original.parentNode.appendChild(clone);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
